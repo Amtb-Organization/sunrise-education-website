@@ -1,0 +1,491 @@
+/* Cambridge IGCSE Detailed Section Styles */
+
+.igcse-detailed-section {
+  background-color: var(--light-bg);
+  padding: 4rem 1.5rem;
+}
+
+.igcse-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.igcse-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.igcse-header h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.igcse-header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+/* What is IGCSE */
+.what-is-igcse {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--primary);
+}
+
+.what-is-igcse h3 {
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+.what-is-igcse p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+/* Subjects Grid */
+.subjects-section {
+  margin-bottom: 4rem;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.subject-category {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.subject-category:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.subject-category-title {
+  color: var(--secondary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--primary);
+}
+
+.subject-item {
+  margin-bottom: 1.5rem;
+}
+
+.subject-item:last-child {
+  margin-bottom: 0;
+}
+
+.subject-name {
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subject-description {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* Assessment Methods */
+.assessment-section {
+  margin-bottom: 4rem;
+}
+
+.assessment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.assessment-card {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.assessment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.assessment-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.assessment-card h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.assessment-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+/* Grading System */
+.grading-section {
+  margin-bottom: 4rem;
+}
+
+.grading-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-top: 2rem;
+}
+
+.grading-table thead {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: white;
+}
+
+.grading-table th {
+  padding: 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--border);
+}
+
+.grading-table td {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.grading-table tbody tr:hover {
+  background-color: var(--light-bg);
+}
+
+.grade-badge {
+  display: inline-block;
+  min-width: 3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+.grade-badge.grade-9 { background-color: #4CAF50; }
+.grade-badge.grade-8 { background-color: #45a049; }
+.grade-badge.grade-7 { background-color: #2196F3; }
+.grade-badge.grade-6 { background-color: #2196F3; }
+.grade-badge.grade-5 { background-color: #FF9800; }
+.grade-badge.grade-4 { background-color: #FF9800; }
+.grade-badge.grade-3 { background-color: #f44336; }
+.grade-badge.grade-2 { background-color: #f44336; }
+.grade-badge.grade-1 { background-color: #c62828; }
+.grade-badge.grade-u { background-color: #757575; }
+
+/* Benefits */
+.benefits-section {
+  margin-bottom: 4rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary);
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+  color: var(--secondary);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* Post-IGCSE Pathways */
+.pathways-section {
+  margin-bottom: 4rem;
+}
+
+.pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pathway-card {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pathway-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pathway-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.pathway-card h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.pathway-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+/* FAQ */
+.faq-section {
+  margin-bottom: 4rem;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.faq-item {
+  background-color: var(--card-bg);
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.faq-question {
+  background-color: var(--light-bg);
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.faq-question:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.faq-question h4 {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.faq-question:hover h4 {
+  color: white;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-toggle.active {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 1.5rem;
+  color: var(--text-light);
+  display: none;
+  border-top: 1px solid var(--border);
+  line-height: 1.8;
+}
+
+.faq-answer.active {
+  display: block;
+}
+
+/* Program Structure */
+.program-structure-section {
+  margin-bottom: 4rem;
+}
+
+.program-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.timeline-item {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--primary);
+}
+
+.timeline-item h4 {
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+  color: var(--text-light);
+}
+
+.yearly-schedule {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.schedule-item {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+  color: white;
+  border-radius: 6px;
+}
+
+.schedule-month {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.schedule-description {
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .igcse-detailed-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .igcse-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .subjects-grid,
+  .assessment-grid,
+  .benefits-grid,
+  .pathways-grid,
+  .program-timeline,
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grading-table {
+    font-size: 0.9rem;
+  }
+
+  .grading-table th,
+  .grading-table td {
+    padding: 1rem;
+  }
+
+  .faq-question {
+    padding: 1rem;
+  }
+
+  .faq-answer {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .igcse-detailed-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .igcse-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .subject-category,
+  .what-is-igcse,
+  .assessment-card,
+  .benefit-card,
+  .pathway-card,
+  .timeline-item,
+  .yearly-schedule,
+  .faq-item {
+    padding: 1.5rem;
+  }
+
+  .grading-table {
+    font-size: 0.8rem;
+  }
+
+  .grading-table th,
+  .grading-table td {
+    padding: 0.75rem;
+  }
+
+  .grade-badge {
+    min-width: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .benefit-icon,
+  .assessment-icon,
+  .pathway-icon {
+    font-size: 2rem;
+  }
+}
