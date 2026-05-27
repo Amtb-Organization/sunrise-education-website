@@ -1,0 +1,395 @@
+<!-- Cambridge IGCSE Detailed Section HTML -->
+
+<section class="igcse-detailed-section" id="igcse-detailed">
+  <div class="igcse-container">
+    <!-- Header -->
+    <div class="igcse-header">
+      <h2 id="igcse-title">Cambridge IGCSE Curriculum - Detailed Overview</h2>
+      <p id="igcse-subtitle">Comprehensive information about our Cambridge IGCSE program</p>
+    </div>
+
+    <!-- What is IGCSE -->
+    <div class="what-is-igcse">
+      <h3 id="what-is-igcse-title">What is Cambridge IGCSE?</h3>
+      <p id="igcse-desc-1"></p>
+      <p id="igcse-desc-2"></p>
+      <p id="igcse-desc-3"></p>
+    </div>
+
+    <!-- Subjects Section -->
+    <div class="subjects-section">
+      <div class="igcse-header">
+        <h3 id="subjects-title">Cambridge IGCSE Subjects</h3>
+        <p id="subjects-subtitle"></p>
+      </div>
+      <div class="subjects-grid" id="subjects-grid"></div>
+    </div>
+
+    <!-- Assessment Methods -->
+    <div class="assessment-section">
+      <div class="igcse-header">
+        <h3 id="assessment-title">Assessment Methods</h3>
+        <p id="assessment-subtitle"></p>
+      </div>
+      <div class="assessment-grid" id="assessment-grid"></div>
+    </div>
+
+    <!-- Grading System -->
+    <div class="grading-section">
+      <div class="igcse-header">
+        <h3 id="grading-title">Grading System</h3>
+        <p id="grading-subtitle"></p>
+      </div>
+      <table class="grading-table" id="grading-table"></table>
+    </div>
+
+    <!-- Benefits -->
+    <div class="benefits-section">
+      <div class="igcse-header">
+        <h3 id="benefits-title">Why Choose Cambridge IGCSE?</h3>
+        <p id="benefits-subtitle"></p>
+      </div>
+      <div class="benefits-grid" id="benefits-grid"></div>
+    </div>
+
+    <!-- Post-IGCSE Pathways -->
+    <div class="pathways-section">
+      <div class="igcse-header">
+        <h3 id="pathways-title">Post-IGCSE Pathways</h3>
+        <p id="pathways-subtitle"></p>
+      </div>
+      <div class="pathways-grid" id="pathways-grid"></div>
+    </div>
+
+    <!-- Program Structure -->
+    <div class="program-structure-section">
+      <div class="igcse-header">
+        <h3 id="structure-title">IGCSE Program Structure</h3>
+      </div>
+      <div class="program-timeline" id="program-timeline"></div>
+      <div class="yearly-schedule">
+        <h4 id="schedule-title">Yearly Schedule</h4>
+        <div class="schedule-grid" id="schedule-grid"></div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <div class="igcse-header">
+        <h3 id="faq-title">Frequently Asked Questions</h3>
+        <p id="faq-subtitle"></p>
+      </div>
+      <div class="faq-container" id="faq-container"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Function to render IGCSE detailed content
+function renderIGCSEDetailed() {
+  const t = (key) => i18n.get(key);
+
+  // Update headers
+  document.getElementById('igcse-title').textContent = t('curriculumTitle');
+  document.getElementById('igcse-subtitle').textContent = t('curriculumDesc');
+  document.getElementById('igcse-desc-1').textContent = t('igcseDesc1');
+  document.getElementById('igcse-desc-2').textContent = t('igcseDesc2');
+  document.getElementById('igcse-desc-3').textContent = t('igcseDesc3');
+
+  // Render Subjects
+  const subjectsHTML = `
+    <div class="subject-category">
+      <div class="subject-category-title">${t('coreSubjects')}</div>
+      <div class="subject-item">
+        <div class="subject-name">${t('englishLanguage')}</div>
+        <div class="subject-description">${t('englishLanguageDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('mathematics')}</div>
+        <div class="subject-description">${t('mathematicsDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('science')}</div>
+        <div class="subject-description">${t('scienceDesc')}</div>
+      </div>
+    </div>
+    <div class="subject-category">
+      <div class="subject-category-title">${t('additionalLanguages')}</div>
+      <div class="subject-item">
+        <div class="subject-name">${t('chineseLanguage')}</div>
+        <div class="subject-description">${t('chineseLanguageDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('malayLanguage')}</div>
+        <div class="subject-description">${t('malayLanguageDesc')}</div>
+      </div>
+    </div>
+    <div class="subject-category">
+      <div class="subject-category-title">${t('humanitiesSocial')}</div>
+      <div class="subject-item">
+        <div class="subject-name">${t('history')}</div>
+        <div class="subject-description">${t('historyDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('geography')}</div>
+        <div class="subject-description">${t('geographyDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('economics')}</div>
+        <div class="subject-description">${t('economicsDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('businessStudies')}</div>
+        <div class="subject-description">${t('businessStudiesDesc')}</div>
+      </div>
+    </div>
+    <div class="subject-category">
+      <div class="subject-category-title">${t('stemSubjects')}</div>
+      <div class="subject-item">
+        <div class="subject-name">${t('physics')}</div>
+        <div class="subject-description">${t('physicsDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('chemistry')}</div>
+        <div class="subject-description">${t('chemistryDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('biology')}</div>
+        <div class="subject-description">${t('biologyDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('ict')}</div>
+        <div class="subject-description">${t('ictDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('computerScience')}</div>
+        <div class="subject-description">${t('computerScienceDesc')}</div>
+      </div>
+    </div>
+    <div class="subject-category">
+      <div class="subject-category-title">${t('artsCreativity')}</div>
+      <div class="subject-item">
+        <div class="subject-name">${t('artDesign')}</div>
+        <div class="subject-description">${t('artDesignDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('music')}</div>
+        <div class="subject-description">${t('musicDesc')}</div>
+      </div>
+      <div class="subject-item">
+        <div class="subject-name">${t('literatureEnglish')}</div>
+        <div class="subject-description">${t('literatureEnglishDesc')}</div>
+      </div>
+    </div>
+  `;
+  document.getElementById('subjects-grid').innerHTML = subjectsHTML;
+  document.getElementById('subjects-title').textContent = t('subjects');
+  document.getElementById('subjects-subtitle').textContent = t('subjectsDesc');
+
+  // Render Assessment Methods
+  const assessmentHTML = `
+    <div class="assessment-card">
+      <div class="assessment-icon">✏️</div>
+      <h4>${t('writtenExaminations')}</h4>
+      <p>${t('writtenExamDesc')}</p>
+    </div>
+    <div class="assessment-card">
+      <div class="assessment-icon">🔬</div>
+      <h4>${t('practicalAssessment')}</h4>
+      <p>${t('practicalAssessDesc')}</p>
+    </div>
+    <div class="assessment-card">
+      <div class="assessment-icon">📋</div>
+      <h4>${t('courseworkProjects')}</h4>
+      <p>${t('courseworkProjectsDesc')}</p>
+    </div>
+    <div class="assessment-card">
+      <div class="assessment-icon">🎤</div>
+      <h4>${t('oralExaminations')}</h4>
+      <p>${t('oralExamDesc')}</p>
+    </div>
+  `;
+  document.getElementById('assessment-grid').innerHTML = assessmentHTML;
+  document.getElementById('assessment-title').textContent = t('assessmentMethods');
+  document.getElementById('assessment-subtitle').textContent = t('assessmentDesc');
+
+  // Render Grading Table
+  const grades = [
+    ['9', t('grade9'), t('grade9Desc')],
+    ['8', t('grade8'), t('grade8Desc')],
+    ['7', t('grade7'), t('grade7Desc')],
+    ['6', t('grade6'), t('grade6Desc')],
+    ['5', t('grade5'), t('grade5Desc')],
+    ['4', t('grade4'), t('grade4Desc')],
+    ['3', t('grade3'), t('grade3Desc')],
+    ['2', t('grade2'), t('grade2Desc')],
+    ['1', t('grade1'), t('grade1Desc')],
+    ['U', t('gradeU'), t('gradeUDesc')]
+  ];
+
+  let gradingHTML = '<thead><tr><th>Grade</th><th>Achievement Level</th><th>Description</th></tr></thead><tbody>';
+  grades.forEach(([grade, title, desc]) => {
+    const gradeClass = grade === 'U' ? 'grade-u' : `grade-${grade}`;
+    gradingHTML += `<tr><td><span class="grade-badge ${gradeClass}">${grade}</span></td><td><strong>${title}</strong></td><td>${desc}</td></tr>`;
+  });
+  gradingHTML += '</tbody>';
+  document.getElementById('grading-table').innerHTML = gradingHTML;
+  document.getElementById('grading-title').textContent = t('gradingSystem');
+  document.getElementById('grading-subtitle').textContent = t('gradingDesc');
+
+  // Render Benefits
+  const benefitsHTML = `
+    <div class="benefit-card">
+      <div class="benefit-icon">🌍</div>
+      <h4>${t('benefit1')}</h4>
+      <p>${t('benefit1Desc')}</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">✓</div>
+      <h4>${t('benefit2')}</h4>
+      <p>${t('benefit2Desc')}</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">📚</div>
+      <h4>${t('benefit3')}</h4>
+      <p>${t('benefit3Desc')}</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🧠</div>
+      <h4>${t('benefit4')}</h4>
+      <p>${t('benefit4Desc')}</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🎓</div>
+      <h4>${t('benefit5')}</h4>
+      <p>${t('benefit5Desc')}</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🌏</div>
+      <h4>${t('benefit6')}</h4>
+      <p>${t('benefit6Desc')}</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">💼</div>
+      <h4>${t('benefit7')}</h4>
+      <p>${t('benefit7Desc')}</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">⚙️</div>
+      <h4>${t('benefit8')}</h4>
+      <p>${t('benefit8Desc')}</p>
+    </div>
+  `;
+  document.getElementById('benefits-grid').innerHTML = benefitsHTML;
+  document.getElementById('benefits-title').textContent = t('igcseBenefits');
+  document.getElementById('benefits-subtitle').textContent = t('benefitsDesc');
+
+  // Render Pathways
+  const pathwaysHTML = `
+    <div class="pathway-card">
+      <div class="pathway-icon">📖</div>
+      <h4>${t('aLevels')}</h4>
+      <p>${t('aLevelsDesc')}</p>
+    </div>
+    <div class="pathway-card">
+      <div class="pathway-icon">🌐</div>
+      <h4>${t('internationalBaccalaureate')}</h4>
+      <p>${t('ibDesc')}</p>
+    </div>
+    <div class="pathway-card">
+      <div class="pathway-icon">🇺🇸</div>
+      <h4>${t('advancedPlacement')}</h4>
+      <p>${t('apDesc')}</p>
+    </div>
+    <div class="pathway-card">
+      <div class="pathway-icon">🎓</div>
+      <h4>${t('directUniversity')}</h4>
+      <p>${t('directUniversityDesc')}</p>
+    </div>
+  `;
+  document.getElementById('pathways-grid').innerHTML = pathwaysHTML;
+  document.getElementById('pathways-title').textContent = t('postIGCSE');
+  document.getElementById('pathways-subtitle').textContent = t('postIGCSEDesc');
+
+  // Render Program Timeline
+  const timelineHTML = `
+    <div class="timeline-item">
+      <h4>${t('year1')}</h4>
+      <p>${t('year1Desc')}</p>
+    </div>
+    <div class="timeline-item">
+      <h4>${t('year2')}</h4>
+      <p>${t('year2Desc')}</p>
+    </div>
+  `;
+  document.getElementById('program-timeline').innerHTML = timelineHTML;
+  document.getElementById('structure-title').textContent = t('programStructure');
+
+  // Render Schedule
+  const scheduleHTML = `
+    <div class="schedule-item">
+      <div class="schedule-month">${t('sepOct')}</div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-month">${t('novDec')}</div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-month">${t('janFeb')}</div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-month">${t('marApr')}</div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-month">${t('mayJun')}</div>
+    </div>
+    <div class="schedule-item">
+      <div class="schedule-month">${t('augSep')}</div>
+    </div>
+  `;
+  document.getElementById('schedule-grid').innerHTML = scheduleHTML;
+  document.getElementById('schedule-title').textContent = t('yearlySchedule');
+
+  // Render FAQ
+  const faqItems = [
+    [t('faq1Question'), t('faq1Answer')],
+    [t('faq2Question'), t('faq2Answer')],
+    [t('faq3Question'), t('faq3Answer')],
+    [t('faq4Question'), t('faq4Answer')],
+    [t('faq5Question'), t('faq5Answer')],
+    [t('faq6Question'), t('faq6Answer')]
+  ];
+
+  let faqHTML = '';
+  faqItems.forEach((item, index) => {
+    faqHTML += `
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h4>${item[0]}</h4>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          ${item[1]}
+        </div>
+      </div>
+    `;
+  });
+  document.getElementById('faq-container').innerHTML = faqHTML;
+  document.getElementById('faq-title').textContent = t('igcseFAQ');
+  document.getElementById('faq-subtitle').textContent = t('faqDesc');
+}
+
+// Toggle FAQ
+function toggleFAQ(element) {
+  const answer = element.nextElementSibling;
+  const toggle = element.querySelector('.faq-toggle');
+  answer.classList.toggle('active');
+  toggle.classList.toggle('active');
+}
+
+// Initial render
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderIGCSEDetailed);
+} else {
+  renderIGCSEDetailed();
+}
+</script>
